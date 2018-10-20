@@ -86,6 +86,15 @@ def Sol2 (root):
 
 
 def Merge(a,b):
+    """
+    Takes two sorted linked lists and merges them into a single sorted linked list
+
+    Parameters:
+        a: first sorted linked list
+        b: second sorted linked list
+    Returns:
+        Pointerlist: sorted linked list that contains all the elements in linked list a and b
+    """
     PointerA = a
     PointerB = b
     Pointerlist = None
@@ -107,6 +116,14 @@ def Merge(a,b):
     return Pointerlist
        
 def Mergesort(root):
+    """
+    Sorts a linked list using mergesort algorithm
+    
+    Parameters:
+        root: root of linked list
+    Returns:
+        sortedList: first node of a sorted linked list
+    """
     if root is None or root.next is None :
         return root
     Head = root 
@@ -117,9 +134,14 @@ def Mergesort(root):
         Leading = Leading.next.next
         if Leading is None or Leading.next is None : 
             break
-
+#        if Leading is not None: 
+#            Leading = Leading.next
     Rightmiddle = Lagging.next
-
+ #   middle = MiddleLL(Head)
+ #   Rightmiddle = middle.next
+#    while Head is not None:
+#        print(Head.item)
+#        Head = Head.next
     Lagging.next = None
     LeftHalf = Mergesort(Head)
     RightHalf = Mergesort(Rightmiddle)
@@ -127,6 +149,16 @@ def Mergesort(root):
     return sortedlist
 
 def Sol3(root):
+    """
+    Sorts linked list through recursive mergesort. Then Traverses linked list and
+    compares current item with next item and if they match a message is printed
+    to indicate so.
+
+    Parameters:
+        root: root of linked list
+    Return:
+        returns nothing
+    """
     Sortedlist =Mergesort(root)
     Leading = Sortedlist
     while Leading.next is not None:
@@ -181,5 +213,5 @@ file_name2 = str(input("Enter the name of the second file that contains ID's: ")
 root = getIDs(file_name1,file_name2)
 #Sol1(root)
 #Sol2(root)
-Sol3(root)
-#Sol4(root)
+#Sol3(root)
+Sol4(root)
