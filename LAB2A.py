@@ -117,14 +117,9 @@ def Mergesort(root):
         Leading = Leading.next.next
         if Leading is None or Leading.next is None : 
             break
-#        if Leading is not None: 
-#            Leading = Leading.next
+
     Rightmiddle = Lagging.next
- #   middle = MiddleLL(Head)
- #   Rightmiddle = middle.next
-#    while Head is not None:
-#        print(Head.item)
-#        Head = Head.next
+
     Lagging.next = None
     LeftHalf = Mergesort(Head)
     RightHalf = Mergesort(Rightmiddle)
