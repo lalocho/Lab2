@@ -1,0 +1,10 @@
+# create a method that will load both of the .txt files and that creates a single linked list out of them
+def getUsers(filename):
+    user_List= []
+    with open(filename)as file:
+        for line in file:
+            values = line.split(",")
+            user_List.append(User(values[0],values[1],values[2]))
+    global pw_yet_found
+    pw_yet_found = len(user_List)
+    return user_List
