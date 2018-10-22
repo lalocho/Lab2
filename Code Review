@@ -1,0 +1,7 @@
+Luis Ochoa  
+80508534  
+Code Review
+
+Solid clean code with great comments explaining what functions do. However, i think comments explaining what and why some specific
+lines of code are done. Also there is some left over code that has been commented out; should either be removed or explained why its left 
+in the source code.
